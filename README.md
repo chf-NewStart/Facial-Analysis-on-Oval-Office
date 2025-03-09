@@ -6,9 +6,9 @@
 ![DeepFace](https://img.shields.io/badge/DeepFace-0.0.75-orange)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0.8.9-purple)
 
+<img width="788" alt="g" src="https://github.com/user-attachments/assets/aca82038-4878-4470-9f0f-8e4eb480dd99" />
 
 
-<img width="792" alt="Screenshot 2025-03-09 at 09 28 33" src="https://github.com/user-attachments/assets/468bc1c6-5bc9-4217-b37a-f7ecfb8c6f52" />
 
 An advanced computer vision project that analyzes facial expressions of political figures in real-time, revealing emotional patterns hidden beneath public appearances. This system combines facial detection, emotion recognition, and temporal tracking to provide insights into non-verbal communication during political speeches and interviews.
 
