@@ -72,16 +72,6 @@ jupyter notebook emotion_analysis.ipynb
 
 ```
 
-### Analyzing Your Own Videos
-
-There are two ways to analyze videos:
-
-1. **From YouTube**: Modify the URL in this line:
-   ```python
-   video_path = download_video("https://www.youtube.com/watch?v=v_kTNIYsFnQ", "test_video.mp4")
-   ```
-
-2. **From Local File**: Upload your own video and rename it to `test_video.mp4`
 
 ### Requirements
 
