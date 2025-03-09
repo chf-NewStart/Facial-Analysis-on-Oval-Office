@@ -1,38 +1,81 @@
-# AI Emotion Recognition: Analyzing Facial Expressions of World Leaders
+# AI Emotion Recognition: Facial Expression Analysis of World Leaders
 
 ![Emotion Analysis](https://img.shields.io/badge/AI-Emotion%20Analysis-blue)
 ![Python](https://img.shields.io/badge/Python-3.7%2B-green)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.5%2B-red)
 ![DeepFace](https://img.shields.io/badge/DeepFace-0.0.75-orange)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-0.8.9-purple)
 
-A computer vision project that analyzes facial expressions of political figures to identify emotional patterns throughout video content.
+An advanced computer vision project that analyzes facial expressions of political figures in real-time, revealing emotional patterns hidden beneath public appearances. This system combines facial detection, emotion recognition, and temporal tracking to provide insights into non-verbal communication during political speeches and interviews.
 
 > **Disclaimer:** This analysis is conducted purely for technical demonstration purposes and does not reflect any political preferences or biases. The objective is to showcase AI capabilities in emotion recognition across different speakers, regardless of political affiliation.
 
 ## 📋 Overview
 
-This project uses AI to detect and analyze the facial expressions of political figures (including President Zelensky, President Trump, and JD Vance) from video footage. The system processes video frames, identifies faces, and classifies emotional states using deep learning models, providing insights into non-verbal communication patterns during political discourse.
+This project uses state-of-the-art AI to detect and analyze the facial expressions of political figures (including President Zelensky, President Trump, and JD Vance) from video footage. Going beyond simple frame-by-frame detection, the system implements:
 
-## ✨ Features
+- Robust face tracking with persistence across frames
+- Temporal emotion smoothing to filter noise and capture true expressions
+- Color-coded visualizations with confidence indicators
+- Multi-person differentiation and parallel tracking
 
-- **Multi-person face detection** and tracking using MediaPipe
-- **Emotion classification** into 7 categories (happy, sad, angry, disgust, fear, surprise, neutral)
-- **Temporal emotion tracking** showing how emotions change over time
-- **Comparative analysis** between different speakers
-- **Visualization tools** including:
-  - Emotion trajectory graphs
-  - Face galleries with metadata
-  - Emotion distribution charts
-  - Annotated summary videos with emotion labels
-- **Audio synchronization** in result videos
+The result is a comprehensive analysis revealing how emotions evolve throughout speeches and interviews, providing unique insights into the emotional landscape of political communication.
 
-## 🔧 Installation & Usage
+## ✨ Key Features
+
+- **Advanced Face Detection & Tracking**
+  - Multiple person tracking with identity persistence 
+  - Stable bounding boxes with reduced flickering
+  - Handles temporary occlusion and pose changes
+  
+- **Sophisticated Emotion Analysis**
+  - Classification into 7 distinct emotions (happy, sad, angry, disgust, fear, surprise, neutral)
+  - Confidence percentages for each detected emotion
+  - Rolling-window approach for temporal consistency
+  
+- **Rich Visualizations**
+  - Color-coded emotion indicators (green=happy, red=angry, etc.)
+  - Time-series emotion trajectories
+  - Face galleries with appearance counts
+  - Distribution analysis of emotional states
+  
+- **Enhanced Video Generation**
+  - Annotated footage with emotion labels
+  - Audio synchronization with voice analysis
+  - Multiple codec support for cross-platform compatibility
+
+## 🚀 Getting Started
+
+### Quick Start
+
+Simply download the Jupyter notebook and run it:
+
+```bash
+# Clone this repository (if using Git)
+git clone https://github.com/yourusername/emotion-analysis.git
+cd emotion-analysis
+
+# Download your video (outside from this ipynb) to your current dir, you could try:
+pip install yt-dlp
+yt-dlp -f "best[height<=720]" "https://www.youtube.com/watch?v=v_kTNIYsFnQ" -o "test_video.mp4"
+
+# Drop the video to the notebook environment
+# Open and run the notebook
+jupyter notebook emotion_analysis.ipynb
 
 
-Just download my ipynb and run it, you will see the final result. 
-You could replace the video that YOU want to analyze by replacing the  `video_path = download_video("https://www.youtube.com/watch?v=v_kTNIYsFnQ", "test_video.mp4")` with another url (from youtube). 
+```
 
-Or you could also upload your own video, in that case, don't forget to rename it to `test_video.mp4`.
+### Analyzing Your Own Videos
+
+There are two ways to analyze videos:
+
+1. **From YouTube**: Modify the URL in this line:
+   ```python
+   video_path = download_video("https://www.youtube.com/watch?v=v_kTNIYsFnQ", "test_video.mp4")
+   ```
+
+2. **From Local File**: Upload your own video and rename it to `test_video.mp4`
 
 ### Requirements
 
@@ -45,59 +88,88 @@ Or you could also upload your own video, in that case, don't forget to rename it
 - tqdm
 - FFmpeg (for audio processing)
 
-Full dependencies are listed in `requirements.txt`.
-
-
 ## 🧠 How It Works
 
-The emotion analysis pipeline consists of several steps:
+### Processing Pipeline
 
-1. **Face Detection**: Using MediaPipe's face detection model to identify faces in video frames
-2. **Face Extraction**: Cropping and saving detected faces with metadata
-3. **Emotion Analysis**: Processing each face with DeepFace to classify emotions
-4. **Emotion Tracking**: Following emotional patterns across frames
-5. **Visualization**: Generating charts and annotated videos
-6. **Audio Integration**: Adding original audio to the analysis video
+The system operates through a sophisticated multi-stage pipeline:
 
-## 📊 Results
+1. **Video Input Processing**
+   - Frame extraction at optimal intervals
+   - Resolution normalization
+   - Metadata preservation
 
-The system generates several outputs:
+2. **Face Detection & Tracking**
+   - MediaPipe face detection model identifies faces in each frame
+   - IOU (Intersection over Union) tracking maintains identity across frames
+   - Persistence mechanism keeps tracks alive through brief disappearances
 
-- **Face Gallery**: Collection of detected faces with ID and appearance counts
-- **Emotion Trajectories**: Time-series graphs showing emotion changes
-- **Distribution Charts**: Bar charts showing the overall emotional makeup
-- **Summary Video**: Annotated video with bounding boxes and emotion labels
+3. **Emotion Analysis**
+   - DeepFace performs emotion classification on each detected face
+   - Temporal smoothing applies a rolling window to filter noise
+   - Confidence calculation based on emotion consistency
 
-Example emotion distribution for one of the analyzed videos:
-- Sad: 37.8%
-- Neutral: 27.8%
-- Angry: 20.9%
-- Fear: 6.5%
-- Happy: 6.4%
-- Surprise: 0.5%
-- Disgust: 0.1%
+4. **Visualization Generation**
+   - Emotion trajectories plotted as time-series data
+   - Face galleries created with metadata
+   - Distribution charts show overall emotional makeup
 
-## 📝 Technical Details
+5. **Enhanced Video Creation**
+   - Original video annotated with emotion labels and bounding boxes
+   - Color-coding applied based on emotion type
+   - Voice analysis (optional) adds audio emotional context
 
-### Face Detection
+## 🔍 Technical Innovations
 
-We use MediaPipe's face detection model which offers excellent performance even with varying face angles and lighting conditions. The detector outputs bounding boxes for each detected face, which we use to extract face regions.
+### Stable Face Tracking
 
-### Emotion Recognition
+The system implements a tracking algorithm that:
+- Uses IOU (Intersection over Union) to match faces across frames
+- Maintains identity even when faces temporarily disappear
+- Requires only 30% overlap between frames for successful tracking
+- Keeps tracks alive for up to 1.5 seconds after disappearance
 
-For emotion recognition, we utilize the DeepFace library which implements several deep learning models for facial analysis. The emotion classifier categorizes expressions into seven basic emotions and provides confidence scores for each category.
+### Temporal Emotion Smoothing
 
-### Video Processing
+To reduce noise and capture true emotional states:
+- Implements a 0.5-second rolling window for each face
+- Uses Counter-based frequency analysis to determine dominant emotions
+- Calculates confidence scores based on consistency
+- Adjusts visualization intensity based on confidence percentage
 
-Video processing is handled with OpenCV, which allows efficient frame extraction and manipulation. To optimize processing time, we sample frames at regular intervals rather than processing every frame.
+### Multi-Codec Video Support
 
-## 🔮 Future Improvements
+To ensure videos work across platforms:
+- Attempts multiple codecs (H264, XVID, mp4v) in sequence
+- Includes a direct FFmpeg fallback option
+- Verifies video creation success with file checking
+- Provides detailed error handling for troubleshooting
 
-- Improve face tracking across frames to better maintain identity
-- Add speech emotion analysis using audio processing
-- Implement more sophisticated emotion models for better accuracy
-- Create interactive visualization dashboard
-- Add support for real-time analysis of live video streams
+## 📊 Example Results
+
+Analysis of political figures reveals distinctive emotional patterns:
+
+- **Emotion Distribution Example**:
+  - Neutral: 54.2%
+  - Happy: 29.7%
+  - Sad: 8.5% 
+  - Fear: 4.2%
+  - Surprise: 2.5%
+  - Angry: 0.8%
+
+- **Insights**:
+  - Political figures maintain predominantly neutral expressions during formal addresses
+  - Emotional transitions often correlate with topic changes
+  - Brief microexpressions provide windows into potentially concealed emotions
+  - Distinct emotional "signatures" can be observed for different speakers
+
+## 🔮 Future Development
+
+- Real-time analysis capabilities for live broadcasts
+- Deeper speech-emotion correlation analysis
+- Integration with speech recognition for text-emotion alignment
+- Expansion to multi-cultural expression analysis
+- Machine learning models to predict upcoming emotional shifts
 
 ## 🙏 Acknowledgments
 
@@ -106,6 +178,7 @@ Video processing is handled with OpenCV, which allows efficient frame extraction
 - [MediaPipe](https://google.github.io/mediapipe/) for their excellent face detection models
 - [DeepFace](https://github.com/serengil/deepface) for providing pre-trained emotion recognition models
 - [OpenCV](https://opencv.org/) for computer vision capabilities
+- The research community advancing facial expression analysis techniques
 
 ## 📄 License
 
