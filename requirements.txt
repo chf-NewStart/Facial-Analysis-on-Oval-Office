@@ -1,0 +1,7 @@
+opencv-python
+numpy
+matplotlib
+mediapipe
+deepface
+tqdm
+yt-dlp
