@@ -58,17 +58,9 @@ Full dependencies are listed in `requirements.txt`.
 
 ### Basic Usage
 
-```python
-# Analyze a video file
-python analyze_video.py --input path/to/video.mp4 --output results/
-```
+Just download my ipynb and run it, you will see the final result. 
+You could replace the video that YOU want to analyze by replacing the  `video_path = download_video("https://www.youtube.com/watch?v=v_kTNIYsFnQ", "test_video.mp4")` with other path
 
-### Advanced Options
-
-```python
-# Full options
-python analyze_video.py --input path/to/video.mp4 --output results/ --sample-rate 5 --min-faces 10 --generate-video --add-audio
-```
 
 ## 🧠 How It Works
 
