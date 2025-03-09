@@ -1,4 +1,4 @@
-# AI Emotion Recognition: Facial Expression Analysis of World Leaders
+# AI Emotion Recognition: Facial Expression Analysis of World Leaders (and can be used on any other videos as well!)
 
 ![Emotion Analysis](https://img.shields.io/badge/AI-Emotion%20Analysis-blue)
 ![Python](https://img.shields.io/badge/Python-3.7%2B-green)
