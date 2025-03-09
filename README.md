@@ -26,20 +26,11 @@ This project uses AI to detect and analyze the facial expressions of political f
   - Annotated summary videos with emotion labels
 - **Audio synchronization** in result videos
 
-## 🔧 Installation
+## 🔧 Installation & Usage
 
-```bash
-# Clone this repository
-git clone https://github.com/yourusername/ai-emotion-recognition.git
-cd ai-emotion-recognition
 
-# Create and activate virtual environment (optional but recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
+Just download my ipynb and run it, you will see the final result. 
+You could replace the video that YOU want to analyze by replacing the  `video_path = download_video("https://www.youtube.com/watch?v=v_kTNIYsFnQ", "test_video.mp4")` with other path
 
 ### Requirements
 
@@ -53,13 +44,6 @@ pip install -r requirements.txt
 - FFmpeg (for audio processing)
 
 Full dependencies are listed in `requirements.txt`.
-
-## 🚀 Usage
-
-### Basic Usage
-
-Just download my ipynb and run it, you will see the final result. 
-You could replace the video that YOU want to analyze by replacing the  `video_path = download_video("https://www.youtube.com/watch?v=v_kTNIYsFnQ", "test_video.mp4")` with other path
 
 
 ## 🧠 How It Works
