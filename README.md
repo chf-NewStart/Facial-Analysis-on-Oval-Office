@@ -56,8 +56,7 @@ Simply download the Jupyter notebook and run it:
 
 ```bash
 # Clone this repository (if using Git)
-git clone https://github.com/yourusername/emotion-analysis.git
-cd emotion-analysis
+git clone https://github.com/chf-NewStart/Facial-Analysis-on-Oval-Office.git
 
 # Download your video (outside from this ipynb) to your current dir, you could try:
 pip install yt-dlp
@@ -67,7 +66,7 @@ yt-dlp -f "best[height<=720]" "https://www.youtube.com/watch?v=v_kTNIYsFnQ" -o "
 
 # Drop the video to the notebook environment
 # Open and run the notebook
-jupyter notebook emotion_analysis.ipynb
+jupyter notebook Facial_and_Voice_Analysis_at_Oval_Office_ver2.ipynb
 
 
 ```
