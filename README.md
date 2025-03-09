@@ -30,7 +30,9 @@ This project uses AI to detect and analyze the facial expressions of political f
 
 
 Just download my ipynb and run it, you will see the final result. 
-You could replace the video that YOU want to analyze by replacing the  `video_path = download_video("https://www.youtube.com/watch?v=v_kTNIYsFnQ", "test_video.mp4")` with other path
+You could replace the video that YOU want to analyze by replacing the  `video_path = download_video("https://www.youtube.com/watch?v=v_kTNIYsFnQ", "test_video.mp4")` with another url (from youtube). 
+
+Or you could also upload your own video, in that case, don't forget to rename it to `test_video.mp4`.
 
 ### Requirements
 
