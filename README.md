@@ -6,6 +6,10 @@
 ![DeepFace](https://img.shields.io/badge/DeepFace-0.0.75-orange)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0.8.9-purple)
 
+
+
+<img width="792" alt="Screenshot 2025-03-09 at 09 28 33" src="https://github.com/user-attachments/assets/468bc1c6-5bc9-4217-b37a-f7ecfb8c6f52" />
+
 An advanced computer vision project that analyzes facial expressions of political figures in real-time, revealing emotional patterns hidden beneath public appearances. This system combines facial detection, emotion recognition, and temporal tracking to provide insights into non-verbal communication during political speeches and interviews.
 
 > **Disclaimer:** This analysis is conducted purely for technical demonstration purposes and does not reflect any political preferences or biases. The objective is to showcase AI capabilities in emotion recognition across different speakers, regardless of political affiliation.
@@ -58,6 +62,8 @@ cd emotion-analysis
 # Download your video (outside from this ipynb) to your current dir, you could try:
 pip install yt-dlp
 yt-dlp -f "best[height<=720]" "https://www.youtube.com/watch?v=v_kTNIYsFnQ" -o "test_video.mp4"
+# Note: if you want to change the video, just change the youtube url
+
 
 # Drop the video to the notebook environment
 # Open and run the notebook
