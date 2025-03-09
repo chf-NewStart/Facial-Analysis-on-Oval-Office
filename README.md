@@ -91,12 +91,13 @@ The system generates several outputs:
 - **Summary Video**: Annotated video with bounding boxes and emotion labels
 
 Example emotion distribution for one of the analyzed videos:
-- Neutral: 54.2%
-- Happy: 29.7%
-- Sad: 8.5%
-- Fear: 4.2%
-- Surprise: 2.5%
-- Angry: 0.8%
+- Sad: 37.8%
+- Neutral: 27.8%
+- Angry: 20.9%
+- Fear: 6.5%
+- Happy: 6.4%
+- Surprise: 0.5%
+- Disgust: 0.1%
 
 ## 📝 Technical Details
 
@@ -122,6 +123,8 @@ Video processing is handled with OpenCV, which allows efficient frame extraction
 
 ## 🙏 Acknowledgments
 
+- [The Telegraph](https://www.youtube.com/watch?v=v_kTNIYsFnQ&list=PPSV) for the original video content used in this analysis
+- [My YouTube demonstration](https://www.youtube.com/watch?v=eltbniewHys&t=1s) for the full project walkthrough
 - [MediaPipe](https://google.github.io/mediapipe/) for their excellent face detection models
 - [DeepFace](https://github.com/serengil/deepface) for providing pre-trained emotion recognition models
 - [OpenCV](https://opencv.org/) for computer vision capabilities
