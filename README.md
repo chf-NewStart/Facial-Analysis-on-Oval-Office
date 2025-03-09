@@ -170,7 +170,7 @@ Analysis of political figures reveals distinctive emotional patterns:
 ## 🙏 Acknowledgments
 
 - [The Telegraph](https://www.youtube.com/watch?v=v_kTNIYsFnQ&list=PPSV) for the original video content used in this analysis
-- [My YouTube demonstration]([https://www.youtube.com/watch?v=eltbniewHys&t=1s](https://youtu.be/7GPsjpwm9X0)) for the full project walkthrough
+- [My YouTube demonstration](https://youtu.be/7GPsjpwm9X0) for the full project walkthrough
 - [MediaPipe](https://google.github.io/mediapipe/) for their excellent face detection models
 - [DeepFace](https://github.com/serengil/deepface) for providing pre-trained emotion recognition models
 - [OpenCV](https://opencv.org/) for computer vision capabilities
