@@ -146,12 +146,9 @@ To ensure videos work across platforms:
 Analysis of political figures reveals distinctive emotional patterns:
 
 - **Emotion Distribution Example**:
-  - Neutral: 54.2%
-  - Happy: 29.7%
-  - Sad: 8.5% 
-  - Fear: 4.2%
-  - Surprise: 2.5%
-  - Angry: 0.8%
+<img width="488" alt="image" src="https://github.com/user-attachments/assets/89aad0be-99a4-4c77-82a6-f22f82373abd" />
+
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/20a61099-ef5a-4866-95dc-4be6af7dcb34" />
 
 - **Insights**:
   - Political figures maintain predominantly neutral expressions during formal addresses
